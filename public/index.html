@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tunquito 🐷</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>Tunquito 🐷</h1>
+  <p class="tag">A little piggy bank — pick a name, tip your friends in sats.</p>
+</header>
+
+<main>
+  <section class="card" id="create-card">
+    <h2>Create your account</h2>
+    <form id="create-form">
+      <input id="name-input" placeholder="Your name" autocomplete="off" required maxlength="40">
+      <button type="submit">Claim my name</button>
+    </form>
+    <p id="create-msg" class="msg"></p>
+  </section>
+
+  <div id="rest" hidden>
+  <section class="card" id="send-card">
+    <h2>Send sats</h2>
+    <form id="send-form">
+      <label>From <input id="from-input" required></label>
+      <label>To <input id="to-input" required></label>
+      <label>Amount (sats) <input id="amount-input" type="number" min="1" step="1" required></label>
+      <label>Memo <input id="memo-input" placeholder="a little note / tip"></label>
+      <button type="submit">Send</button>
+    </form>
+    <p id="send-msg" class="msg"></p>
+  </section>
+
+  <section class="card">
+    <h2>Top up (demo faucet)</h2>
+    <form id="topup-form">
+      <label>Name <input id="topup-name" required></label>
+      <label>Amount (sats) <input id="topup-amount" type="number" min="1" step="1" value="21000"></label>
+      <button type="submit">Top up</button>
+    </form>
+    <p id="topup-msg" class="msg"></p>
+  </section>
+
+  <section class="card">
+    <h2>Accounts &amp; balances</h2>
+    <button id="refresh-btn">Refresh</button>
+    <button id="reset-btn" class="danger">Reset all (demo)</button>
+    <ul id="users-list" class="list"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Recent transfers</h2>
+    <ul id="transfers-list" class="list"></ul>
+  </section>
+  </div>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

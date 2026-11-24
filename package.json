@@ -1,0 +1,20 @@
+{
+  "name": "tunquito",
+  "version": "0.1.0",
+  "description": "Piggy-bank demo: LNbits vault + Telegram admin notifications",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "initdb": "node src/db.js",
+    "mcp": "node mcp/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5",
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  }
+}
